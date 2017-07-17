@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Form Pengajuan Cuti Karyawan Trans Retail</title>
+
+	<link rel="stylesheet" href="assets/home.css">
+	<link rel="stylesheet" href="assets/form_cuti.css">
+
+</head>
+
+
+	<header>
+		<h1> Form Pengajuan Cuti Karyawan Trans Retail</h1>
+    </header>
+
+    <div class="main-content">
+
+        <form class="form-labels-on-top" method="post">
+            <br>
+            <br>
+            <div class="form-title-row">
+                <h1>Form Pengajuan Cuti</h1>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Nama Lengkap</span>
+                    <input type="text" name="name">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Departemen</span>
+                    <select name="dropdown">
+                        <option>IT</option>
+                        <option>HRD</option>
+                        <option>Marketing</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Tanggal Awal Cuti</span>
+                    <input type="date" name="awalcuti">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Tanggal Akhir Cuti</span>
+                    <input type="date" name="akhircuti">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <input type="checkbox" name="validasi"> Apakah ada karyawan pengganti?
+                </label>
+            </div>            
+
+            <div class="form-row">
+                <label>
+                    <span>Nama Pengganti</span>
+                    <input type="text" name="name">
+                </label>
+            </div>
+
+            <br>
+            <br>
+
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                Upload bukti persetujuan cuti:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+
+            <div class="form-row">
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
