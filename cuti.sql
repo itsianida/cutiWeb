@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2017 at 09:22 AM
+-- Generation Time: Jul 17, 2017 at 11:56 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `cuti`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cuti`
+--
+
+CREATE TABLE `cuti` (
+  `id_cuti` int(10) NOT NULL,
+  `tanggal_mulai` date NOT NULL,
+  `tanggal_selesai` date NOT NULL,
+  `kepentingan` varchar(255) NOT NULL,
+  `lama_cuti` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -53,11 +67,26 @@ INSERT INTO `user` (`nik`, `nama`, `username`, `email`, `password`, `departemen`
 --
 
 --
+-- Indexes for table `cuti`
+--
+ALTER TABLE `cuti`
+  ADD PRIMARY KEY (`id_cuti`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`nik`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cuti`
+--
+ALTER TABLE `cuti`
+  MODIFY `id_cuti` int(10) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
